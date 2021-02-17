@@ -131,6 +131,10 @@ monte_carlo(3000)
 Winning probability if you always switch: 0.7436666666666667
 Winning probability if you always stick to your original choice: 0.25633333333333336
 
+Graph of results:
+
+![alt text](lab1.png)
+
 ## Question 9
 In Python one of the libraries that we can use for generating repeated experiments in Monte Carlo simulations is:
 
