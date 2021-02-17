@@ -5,7 +5,8 @@ semester and new technologies I've started working with.
 
 [schedule](https://tyler-frazier.github.io/applied_machine_learning/schedule.html)
 
-# Projects
+# Labs
+[Lab 1](lab1.md)
 
 # Exercises
 
