@@ -7,8 +7,7 @@ semester and new technologies I've started working with.
 
 # Labs
 [Lab 1](lab1.md)
-
-# Exercises
+[Lab 2](lab2.md)
 
 # Resources
 
