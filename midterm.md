@@ -2,34 +2,31 @@
 
 ## Question 1
 ```python
-# question 1
 data = pd.read_csv('weatherHistory.csv')
-data.shape # --> (96453, 12)```
+data.shape # --> (96453, 12)
+```
 
 ## Question 2
-```python
 
-# question 2
-data.head(1)```
+```python
+data.head(1)
+```
 
 From looking at the data, I determined that there were three nominal features; summary, precip type, and daily summary.
 
 ## Question 3
 ```python
-
-# question 3
 X3 = data[['Temperature (C)']].to_numpy()
 y3 = data[['Humidity']].to_numpy()
 linear_model = LinearRegression().fit(X3, y3)
 ypred3 = linear_model.predict(X3)
 rmse = np.sqrt(mean_squared_error(y3, ypred3))
 
-rmse # --> 0.1514437964005473```
+rmse # --> 0.1514437964005473
+```
 
 ## Question 4
 ```python
-
-# question 4
 def DoKFold(model, X, y, k, standardize, random_state):
     if standardize:
         from sklearn.preprocessing import StandardScaler as SS
@@ -67,12 +64,11 @@ model = Ridge(alpha=0.1)
 train_scores, test_scores, PE = DoKFold(model, X4, y4, 20, True, 2020)
 avg_rmse = np.mean(PE)
 
-avg_rmse # --> 0.15143825148125584```
+avg_rmse # --> 0.15143825148125584
+```
 
 ## Question 5
 ```python
-
-# question 5
 def DoKFoldPoly(model, X, y, k, d, standardize, random_state):
     if standardize:
         from sklearn.preprocessing import StandardScaler as SS
@@ -117,11 +113,11 @@ model = LinearRegression()
 train_scores, test_scores, PE = DoKFoldPoly(model, X5, y5, 10, 6, True, 1693)
 avg_rmse = np.mean(PE)
 
-avg_rmse # --> 0.14346597195873528```
+avg_rmse # --> 0.14346597195873528
+```
 
 ## Question 6
 ```python
-
 def RMSE(y,yhat):
     n = len(y)
     return np.sqrt(np.sum((y-yhat) ** 2)/n)
@@ -147,12 +143,11 @@ def RMSE(y,yhat):
     y6 = data[['Humidity']].to_numpy()
 
     model = RandomForestRegressor(n_estimators=100,max_depth=50)
-    #DoKFoldTree(X6, y6, model, 10) # --> (nan, 23882.75628862717)```
+    #DoKFoldTree(X6, y6, model, 10) # --> (nan, 23882.75628862717)
+    ```
 
 ## Question 7
 ```python
-
-# question 7
 def DoKFold(model, X, y, k, standardize, random_state):
     if standardize:
         from sklearn.preprocessing import StandardScaler as SS
@@ -190,12 +185,11 @@ model = Ridge(alpha=0.2)
 train_scores, test_scores, PE = DoKFold(model, X7, y7, 10, True, 1234)
 avg_rmse = np.mean(PE)
 
-avg_rmse # --> 0.15144461669159875```
+avg_rmse # --> 0.15144461669159875
+```
 
 ## Question 8
 ```python
-
-# question 8
 X8 = data[['Humidity', 'Wind Speed (km/h)', 'Pressure (millibars)', 'Wind Bearing (degrees)']].to_numpy()
 y8 = data[['Temperature (C)']].to_numpy()
 model = LinearRegression()
@@ -203,26 +197,25 @@ model = LinearRegression()
 train_scores, test_scores, PE = DoKFoldPoly(model, X8, y8, 10, 6, True, 1234)
 avg_rmse = np.mean(PE)
 
-avg_rmse # --> 6.127033222535402```
+avg_rmse # --> 6.127033222535402
+```
 
 ## Question 9
 ```python
-
-# question 9
 X6 = X8
 y6 = np.ravel(y8)
 
 model = RandomForestRegressor(n_estimators=100,max_depth=50)
-DoKFoldTree(X6, y6, model, 10) # --> 5.829853854675095```
+DoKFoldTree(X6, y6, model, 10) # --> 5.829853854675095
+```
 
 ## Question 10
 ```python
-
-# question 10
 x = data['Temperature (C)']
 y = data['Humidity']
 
 data.plot(x = 'Temperature (C)', y = 'Humidity', kind = 'scatter')
-plt.show()```
+plt.show()
+```
 
 ![](mt.png)
