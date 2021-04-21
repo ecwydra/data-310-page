@@ -51,9 +51,9 @@ y_pred = rf_class.predict(X)
 rf_cm = confusion_matrix(y,y_pred)
 ```
 
-Classification Tree: 0 FN
-Naive Bayes: 10 FN
-Random Forest: 0 FN
+Classification Tree: 0 FN <br />
+Naive Bayes: 10 FN <br />
+Random Forest: 0 FN <br />
 
 ### Question 14 and 15
 
