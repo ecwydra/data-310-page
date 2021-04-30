@@ -12,6 +12,7 @@ semester and new technologies I've started working with.
 * [Lab 4](lab4.md)
 * [Lab 5](lab5/lab5.md)
 * [Lab 6](lab6.md)
+* [Lab 7](lab7/lab7.md)
 
 # Exams
 * [Midterm Exam](midterm.md)
