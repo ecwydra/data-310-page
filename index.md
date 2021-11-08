@@ -24,3 +24,4 @@ semester and new technologies I've started working with.
 # Technologies
 
 * google colab notebooks
+* tensorflow
